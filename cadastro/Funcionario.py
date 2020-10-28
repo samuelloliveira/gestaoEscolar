@@ -17,7 +17,7 @@ class Funcionario(PessoaFisica):
         self.__nrPis = nrPis
 
     def __str__(self):
-        return super(Funcionario, self).__str__() + "\nNúmero do PIS: " + str(self.nrPis()) + "\nMatrícula do Funcionário: " + str(self.nrRegistro()) + "\nSalário: " + str(self.salario()) + "\nSetor: " + str(self.departamento())
+        return super(Funcionario, self).__str__() + "\nNúmero do PIS: " + str(self.nrPis) + "\nMatrícula do Funcionário: " + str(self.nrRegistro) + "\nSalário: " + str(self.salario) + "\nSetor: " + str(self.departamento)
 
     # Retornando o valor dos atributos através do método GET
     @property
@@ -99,7 +99,7 @@ class Funcionario(PessoaFisica):
             # Mensagem de erro ou sucesso
             if novoFuncionario in funcionarios:
                 print()
-                sucesso.mensagemSucessoCadastro(novoFuncionario.nome())
+                sucesso.mensagemSucessoCadastro(novoFuncionario.nome)
             else:
                 print()
                 erro.mensagemErroCadastro(novoFuncionario)

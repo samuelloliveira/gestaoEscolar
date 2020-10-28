@@ -10,6 +10,9 @@ class Curso:
         self.__descricao = descricao
         self.__materias = materias
 
+    def __str__(self):
+        return "Nome do Curso: " + str(self.nome) + "\nDescrição do Curso: " + str(self.descricao)
+
     # Retornando o valor dos atributos através método GET
     @property
     def nome(self):
@@ -37,6 +40,10 @@ class Curso:
         self.__materias = materias
 
     # Métodos da Classe
+
+    # Imprimindo Cursos
+    def imprimir(self):
+        print(self)
 
     # Cadastrando cursos
     @staticmethod

@@ -27,5 +27,6 @@ def menuGerencia(escola):
     print("7 - Cadastrar Alunos")
     print("8 - Listar Alunos Cadastrados")
     print("9 - Cadastrar Turma")
-    print("10 - Relatórios")
-    print("11 - Sair")
+    print("10 - Listar Turmas Cadastradas")
+    print("11 - Relatórios")
+    print("12 - Sair")

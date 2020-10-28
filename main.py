@@ -58,14 +58,35 @@ while root:
 
                 # Imprime todas as escolas cadastradas, pergunta ao usuário qual escola ele quer gerenciar e retorna o
                 # objeto escola
-                gerencia = escola.mostrarTodasEscolas(escolas)
+                contador = 1
+                for escola in escolas:
+                    print("--------------------------------------------------------------------------------")
+                    print(str(contador) + " - ")
+                    escola.imprimir()
+                    contador += 1
+
+                opcaoUsuario = int(input("\nInsira o número da escola que você deseja gerenciar: "))
+                opcaoUsuario -= 1
 
                 # Chama função para gerenciar Escola
-                gerenciar.gerenciarEscola(gerencia)
+                gerenciar.gerenciarEscola(escolas[opcaoUsuario])
+
         elif opcaoUsuario == 2:
-            pass
+            contador = 1
+            for escola in escolas:
+                print("--------------------------------------------------------------------------------")
+                print(str(contador) + " - ")
+                escola.imprimir()
+                contador += 1
+
         elif opcaoUsuario == 3:
-            pass
+            # Chama a função cadastrar
+            cadastrando = PessoaJuridica.PessoaJuridica.cadastrarEscola()
+            escolas = escolas + cadastrando
+
+            # Ordena em ordem alfabetica os objetos na lista.
+            sorted(escolas, key=lambda PessoaJuridica: PessoaJuridica.nome)
+
         elif opcaoUsuario == 4:
             root = False
         else:
@@ -78,7 +99,7 @@ while root:
             escolas = escolas + cadastrando
 
             # Ordena em ordem alfabetica os objetos na lista.
-            sorted(escolas, key=lambda PessoaJuridica: PessoaJuridica.__nome())
+            sorted(escolas, key=lambda PessoaJuridica: PessoaJuridica.nome)
         elif opcaoUsuario == 2:
             root = False
         else:

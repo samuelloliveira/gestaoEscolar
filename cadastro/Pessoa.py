@@ -9,7 +9,7 @@ class Pessoa:
         self.__endereco = endereco
 
     def __str__(self):
-        return "Nome: " + self.nome() + "\nTelefone: " + self.telefone() + "\nEndereço: " + self.endereco()
+        return "Nome: " + str(self.nome) + "\nTelefone: " + str(self.telefone) + "\nEndereço: " + str(self.endereco)
 
     # Retornando os atributos através do método GET
     @property
