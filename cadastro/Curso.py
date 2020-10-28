@@ -1,29 +1,54 @@
 # Classe Curso
 
+root = True
+
 class Curso:
 
     # Método Inicializador
-    def __init__(self, nome, descricao, materias):
-        self.nome = nome
-        self.descricao = descricao
-        self.materias = materias
+    def __init__(self, nome, descricao, materias=None):
+        self.__nome = nome
+        self.__descricao = descricao
+        self.__materias = materias
 
     # Retornando o valor dos atributos através método GET
-    def getNome(self):
-        return self.nome
+    @property
+    def nome(self):
+        return self.__nome
 
-    def getDescricao(self):
+    @property
+    def descricao(self):
         return self.descricao
 
-    def getMaterias(self):
+    @property
+    def materias(self):
         return self.materias
 
     # Inserindo dados nos atributos pelo método SET
-    def setNome(self, nome):
-        self.nome = nome
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
-    def setDescricao(self, descricao):
-        self.descricao = descricao
+    @descricao.setter
+    def descricao(self, descricao):
+        self.__descricao = descricao
 
-    def setMaterias(self, materias):
-        self.materias = materias
+    @materias.setter
+    def materias(self, materias):
+        self.__materias = materias
+
+    # Métodos da Classe
+
+    # Cadastrando cursos
+    @staticmethod
+    def cadastrarCuso():
+        # Declarando variavel global
+        global root
+
+        # Vetor onde serão armazenados os cursos cadastrados
+        cursos = []
+
+        while root:
+            print("--------------------------------------------------------------------------------")
+            nome = input("Insira o nome do Curso: ")
+            descricao = input("Insira a descrição do Curso: ")
+

@@ -11,15 +11,19 @@ class PessoaFisica(Pessoa):
         self.__dataNascimento = dataNascimento
 
     # Retornando o valor dos atributos através do método GET
-    def getCpf(self):
+    @property
+    def cpf(self):
         return self.__cpf
 
-    def getDataNascimento(self):
+    @property
+    def dataNascimento(self):
         return self.__dataNascimento
 
     # Inserindo dados nos atributos pelo método SET
-    def setCpf(self, cpf):
+    @cpf.setter
+    def cpf(self, cpf):
         self.__cpf = cpf
 
-    def setDataNascimento(self, dataNascimento):
+    @dataNascimento.setter
+    def dataNascimento(self, dataNascimento):
         self.__dataNascimento = dataNascimento

@@ -4,9 +4,9 @@ def mostrarTodasEscolas(escolas):
     contador = 1
     for escola in escolas:
         print("--------------------------------------------------------------------------------")
-        print(str(contador) + " - " + escola.getNome())
-        print("    " + escola.getEndereco())
-        print("    " + escola.getTelefone())
+        print(str(contador) + " - " + escola.__nome())
+        print("    " + escola.endereco())
+        print("    " + escola.telefone())
 
         contador += 1
 

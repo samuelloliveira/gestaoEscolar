@@ -1,1 +1,1 @@
-__all__ = ["cadastrar", "gerenciar"]
+__all__ = ["gerenciar"]

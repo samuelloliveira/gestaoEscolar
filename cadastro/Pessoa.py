@@ -8,22 +8,37 @@ class Pessoa:
         self.__telefone = telefone
         self.__endereco = endereco
 
+    def __str__(self):
+        return "Nome: " + self.nome() + "\nTelefone: " + self.telefone() + "\nEndereço: " + self.endereco()
+
     # Retornando os atributos através do método GET
-    def getNome(self):
+    @property
+    def nome(self):
         return self.__nome
 
-    def getTelefone(self):
+    @property
+    def telefone(self):
         return self.__telefone
 
-    def getEndereco(self):
+    @property
+    def endereco(self):
         return self.__endereco
 
     # Inserindo dados nos atributos pelo método SET
-    def setNome(self, nome):
+    @nome.setter
+    def nome(self, nome):
         self.__nome = nome
 
-    def setTelefone(self, telefone):
+    @telefone.setter
+    def telefone(self, telefone):
         self.__telefone = telefone
 
-    def setEndereco(self, endereco):
+    @endereco.setter
+    def endereco(self, endereco):
         self.__endereco = endereco
+
+    # Métodos da Classe
+
+    # Para imprimir
+    def imprimir(self):
+        print(self)

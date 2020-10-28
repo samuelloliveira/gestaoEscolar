@@ -12,39 +12,51 @@ class Turma:
         self.dataFinal = dataFinal
 
     # Retornando o valor dos atributos através método GET
-    def getCodigoTurma(self):
+    @property
+    def codigoTurma(self):
         return self.codigoTurma
 
-    def getMaterias(self):
+    @property
+    def materias(self):
         return self.materias
 
-    def getCursos(self):
-        return self.cursos
+    @property
+    def curso(self):
+        return self.curso
 
-    def getAlunos(self):
+    @property
+    def alunos(self):
         return self.alunos
 
-    def getDataInicio(self):
+    @property
+    def dataInicio(self):
         return self.dataInicio
 
-    def getDataFinal(self):
+    @property
+    def dataFinal(self):
         return self.dataFinal
 
     # Inserindo dados nos atributos pelo método SET
-    def setCodigoTurma(self, codigoTurma):
+    @codigoTurma.setter
+    def codigoTurma(self, codigoTurma):
         self.codigoTurma = codigoTurma
 
-    def setMaterias(self, materias):
+    @materias.setter
+    def materias(self, materias):
         self.materias = materias
 
-    def setCursos(self, cursos):
-        self.cursos = cursos
+    @curso.setter
+    def curso(self, curso):
+        self.curso = curso
 
-    def setAlunos(self, alunos):
+    @alunos.setter
+    def alunos(self, alunos):
         self.alunos = alunos
 
-    def setDataInicio(self, dataInicio):
+    @dataInicio.setter
+    def dataInicio(self, dataInicio):
         self.dataInicio = dataInicio
 
-    def setDataFinal(self, dataFinal):
+    @dataFinal.setter
+    def dataFinal(self, dataFinal):
         self.dataFinal = dataFinal
